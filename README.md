@@ -4,7 +4,7 @@ These scripts solve the original Japanese text questions and translated question
 
 1. Original Japanese questions
 2. Translated English questions
-3. With Optimized prompts
+3. With optimized prompts
 
 ## Requirements
 
@@ -41,7 +41,7 @@ This script first translates the original Japanese questions into English and th
 
 [For Comprehension Question](2-2_English_Comprehension.py)
 
-### 3.　With Optimized prompts
+### 3.　With optimized prompts
 
 This script uses optimized prompts for translated questions. 
 
