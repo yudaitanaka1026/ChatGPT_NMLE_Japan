@@ -3,7 +3,7 @@
 """
 @author: tanakayudai
 
-Solve the original Japanese text nquestions of the NMLE in Japan by ChatGPT API
+Solve the original Japanese text non-comprehension questions of the NMLE in Japan by ChatGPT API
 
 "OPENAI_API_KEY", "CSV_FILE_NAME", "QUESTION_FOLDER_PATH" and "RESULT_FOLDER_PATH" should be set according to your environment following the comments below.
 
