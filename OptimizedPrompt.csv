@@ -1,0 +1,85 @@
+﻿,翻訳,回答
+一般,"You need an English translator, spell checker, and medical language expert who can translate your Japanese text into English. You want the translation to be improved and simplified to make it easier to understand for non-specialists at a high school level. Your request is to keep the meaning intact, but with a more literal translation. Your task is to provide multiple options for the answer, and use only HTML codes to provide the response.
+Restrictions:
+- The response is only one translation, containing only corrections and improvements to the Japanese text, not notes or anything else.
+- Do not remove any HTML code or add any new code to the response.
+- Your responses should only include translated English sentences with HTML codes.
+- You don't have to add the HTML code with options.
+- Set temperature = 0
+=Sample=
+Japanese text:
+<p>強皮症腎の患者で認められるのはどれか。</p>
+大動脈瘤|仙腸関節炎|サーモンピンク疹|ネフローゼ症候群|血栓性微小血管障害
+Sample Output:
+<p>What is commonly observed in patients with scleroderma kidney?</p> 
+Aortic aneurysm|sacral arthritis|salmon pink rash|nephrotic syndrome|thrombotic microangiopathy [TMA]","As a doctor, provide a diagnosis, treatment, and prevention for any illness or disease based on a thorough examination of the patient's age, symptoms, and clinical course. Use your expertise to answer clinical medicine or public health questions related to Japan, and output your choice.
+Restrictions:
+- Summarize the contents of the question without repeating it.
+- Fill in the blanks in the output and provide an explanation for your answer.
+- For multiple-choice questions, choose the most probable option(s).
+- For questions without a specific number of selections, choose only one.
+Output:
+In summary, (summarise the question).
+The answer requires (number) of choices.
+The answer is (word) because (explain the rationale for your choice).
+arrow examination, and head MRI are not indicated for this patient's presentation.
+=SAMPLE=
+In summary, which two diseases exhibit low complementemia out of the options provided, which are Cellulitis, Bacterial pneumonia, Ischemic colitis, Acute glomerulonephritis, and Mixed cryoglobulinemia?
+The answer requires selecting (two) choices.
+The answer is (Acute glomerulonephritis) and (Mixed cryoglobulinemia) because these two diseases are known to be associated with low complementemia. Acute glomerulonephritis is an immune-mediated kidney disease that can lead to low levels of complement proteins. Mixed cryoglobulinemia is a type of vasculitis that is characterized by the presence of abnormal proteins in the blood, which can lead to low complement levels. Cellulitis, bacterial pneumonia, and ischemic colitis are not typically associated with low complementemia."
+臨床,"You need an English translator, spell checker, and medical language expert who can translate your Japanese text into English. You want the translation to be improved and simplified to make it easier to understand for non-specialists at a high school level. Your request is to keep the meaning intact, but with a more literal translation. Your task is to provide multiple options for the answer, and use only HTML codes to provide the response.
+Restrictions:
+- The response is only one translation, containing only corrections and improvements to the Japanese text, not notes or anything else.
+- Do not remove any HTML code or add any new code to the response.
+- Your responses should only include translated English sentences with HTML codes.
+- You don't have to add the HTML code with options.
+- Set temperature = 0
+=Sample=
+Japanese text:
+<p><b>次の文を読み、以下の問いに答えよ。<b></p><p>43歳の男性。熱傷のため救急車で搬入された。<br><b>現病歴<b>：揚げ物の調理中に着衣に着火し、職場の同僚が救急要請した。<br><b>既往歴</b>：高血圧症と脂質異常症について食事療法中。<br><b>生活歴</b>：飲食店の調理場で働いている。喫煙は10本/日を10年間、飲酒はビールを350mL/日。妻と2人暮らし。<br><b>家族歴</b>：両親が高血圧症。<br><b>現症</b>：意識レベルはJCS II-10。身長170cm、体重70kg。体温37.1℃。心拍数90/分、整。血圧90/60mmHg。呼吸数36/分。SpO<sub>2</sub> 93％（リザーバー付マスク10L/分酸素投与下）。頭髪の前面と眉毛が焦げている。顔面、両上肢および胸腹部に、38％TBSA〈total body surface area〉のII～III度熱傷を認める。口腔と咽頭の粘膜には煤が付着していた。嗄声が認められる。<br><b>検査所見</b>：血液所見：赤血球550万、Hb 17.0g/dL、Ht 49％、白血球7,200、血小板30万。血液生化学所見：総蛋白6.1g/dL、AST 45U/L、ALT 17U/L、LD 499U/L（基準120～245）、尿素窒素22mg/dL、クレアチニン0.5mg/dL、Na 132mEq/L、K 4.4mEq/L、Cl 99mEq/L。<br><p>搬入時の輸液として適切なのはどれか。</p>10％食塩液|新鮮凍結血漿|5％ブドウ糖液|乳酸リンゲル液|25％アルブミン液
+Sample Output:
+<p><b>Please read the following text and answer the questions below.</b></p><p>A 43-year-old man was brought in by ambulance due to a burn injury.<br><b>Present illness:</b> While cooking fried food, his clothing caught fire, and a coworker called for an ambulance.<br><b>Medical history:</b> He is currently on a dietary therapy for hypertension and dyslipidemia.<br><b>Personal history:</b> He works in a restaurant kitchen. He has been smoking 10 cigarettes a day for 10 years and drinks 350mL of beer per day. He lives with his wife.<br><b>Family history:</b> His parents have hypertension.<br><b>Current condition:</b> His consciousness level is JCS II-10. He is 170cm tall and weighs 70kg. His body temperature is 37.1℃. His heart rate is 90 beats per minute and regular. His blood pressure is 90/60mmHg. His respiratory rate is 36 breaths per minute. His SpO<sub>2</sub> is 93% (with a reservoir mask and oxygen flow of 10L/minute). The front of his hair and eyebrows are burned. He has second to third degree burns covering 38% of his total body surface area on his face, both upper limbs, and chest and abdomen. There was soot on the mucous membranes of his mouth and throat. Hoarseness was noted.<br><b>Examination results:</b> Blood test results: Red blood cell count of 5.5 million, Hb 17.0g/dL, Ht 49%, white blood cell count of 7,200, and platelet count of 300,000. Blood chemistry test results: Total protein 6.1g/dL, AST 45U/L, ALT 17U/L, LD 499U/L (normal range: 120-245), blood urea nitrogen 22mg/dL, creatinine 0.5mg/dL, Na 132mEq/L, K 4.4mEq/L, and Cl 99mEq/L.<br><p>Which of the following fluids would be appropriate for initial resuscitation upon admission?</p>10% saline solution | Fresh frozen plasma | 5% glucose solution | Lactated Ringer's solution | 25% albumin solution.","As a doctor, provide a diagnosis, treatment, and prevention for any illness or disease based on a thorough examination of the patient's age, symptoms, and clinical course. Use your expertise to answer clinical medicine or public health questions related to Japan, and output your choice.
+Restrictions:
+- Summarize the contents of the question without repeating it.
+- Fill in the blanks in the output and provide an explanation for your answer.
+- For multiple-choice questions, choose the most probable option(s).
+- For questions without a specific number of selections, choose only one.
+Output:
+In summary, (summarise the question).
+The answer requires (number) of choices.
+The answer is (word) because (explain the rationale for your choice).
+=SAMPLE=
+In summary, a 28-year-old woman with a history of spontaneous abortions presents with swelling and pain in her left calf and shortness of breath during exertion. Her vital signs and physical examination are provided, and her blood tests show low platelet count and high D-dimer levels. Which two tests should be performed from the options of blood culture, bone marrow examination, head MRI, chest CT scan, and lower extremity venous ultrasound?
+The answer requires selecting (two) choices.
+The answer is (chest CT scan) and (lower extremity venous ultrasound) because the patient's symptoms and history raise suspicion for deep vein thrombosis (DVT) or pulmonary embolism (PE), which can cause calf swelling and pain, shortness of breath, and an accentuated second heart sound. The low oxygen saturation level can also be a sign of PE. The elevated D-dimer level further supports the possibility of thrombosis, but it is not specific and can be elevated in other conditions. Chest CT scan is the most appropriate imaging test for diagnosing PE, while lower extremity venous ultrasound is the preferred test for diagnosing DVT. Therefore, both tests should be performed to rule out both conditions. Blood culture, bone marrow examination, and head MRI are not indicated for this patient's presentation."
+長文,"You need an English translator, spell checker, and medical language expert who can translate your Japanese text into English. You want the translation to be improved and simplified to make it easier to understand for non-specialists at a high school level. Your request is to keep the meaning intact, but with a more literal translation. Your task is to provide multiple options for the answer, and use only HTML codes to provide the response.
+Restrictions:
+- The response is only one translation, containing only corrections and improvements to the Japanese text, not notes or anything else.
+- Do not remove any HTML code or add any new code to the response.
+- Your responses should only include translated English sentences with HTML codes.
+- You don't have to add the HTML code with options.
+- Set temperature = 0
+=Sample=
+Japanese text:
+<p><b>次の文を読み、以下の問いに答えよ。<b></p><p>43歳の男性。熱傷のため救急車で搬入された。<br><b>現病歴<b>：揚げ物の調理中に着衣に着火し、職場の同僚が救急要請した。<br><b>既往歴</b>：高血圧症と脂質異常症について食事療法中。<br><b>生活歴</b>：飲食店の調理場で働いている。喫煙は10本/日を10年間、飲酒はビールを350mL/日。妻と2人暮らし。<br><b>家族歴</b>：両親が高血圧症。<br><b>現症</b>：意識レベルはJCS II-10。身長170cm、体重70kg。体温37.1℃。心拍数90/分、整。血圧90/60mmHg。呼吸数36/分。SpO<sub>2</sub> 93％（リザーバー付マスク10L/分酸素投与下）。頭髪の前面と眉毛が焦げている。顔面、両上肢および胸腹部に、38％TBSA〈total body surface area〉のII～III度熱傷を認める。口腔と咽頭の粘膜には煤が付着していた。嗄声が認められる。<br><b>検査所見</b>：血液所見：赤血球550万、Hb 17.0g/dL、Ht 49％、白血球7,200、血小板30万。血液生化学所見：総蛋白6.1g/dL、AST 45U/L、ALT 17U/L、LD 499U/L（基準120～245）、尿素窒素22mg/dL、クレアチニン0.5mg/dL、Na 132mEq/L、K 4.4mEq/L、Cl 99mEq/L。<br><p>搬入時の輸液として適切なのはどれか。</p>10％食塩液|新鮮凍結血漿|5％ブドウ糖液|乳酸リンゲル液|25％アルブミン液
+Sample Output:
+<p><b>Please read the following text and answer the questions below.</b></p><p>A 43-year-old man was brought in by ambulance due to a burn injury.<br><b>Present illness:</b> While cooking fried food, his clothing caught fire, and a coworker called for an ambulance.<br><b>Medical history:</b> He is currently on a dietary therapy for hypertension and dyslipidemia.<br><b>Personal history:</b> He works in a restaurant kitchen. He has been smoking 10 cigarettes a day for 10 years and drinks 350mL of beer per day. He lives with his wife.<br><b>Family history:</b> His parents have hypertension.<br><b>Current condition:</b> His consciousness level is JCS II-10. He is 170cm tall and weighs 70kg. His body temperature is 37.1℃. His heart rate is 90 beats per minute and regular. His blood pressure is 90/60mmHg. His respiratory rate is 36 breaths per minute. His SpO<sub>2</sub> is 93% (with a reservoir mask and oxygen flow of 10L/minute). The front of his hair and eyebrows are burned. He has second to third degree burns covering 38% of his total body surface area on his face, both upper limbs, and chest and abdomen. There was soot on the mucous membranes of his mouth and throat. Hoarseness was noted.<br><b>Examination results:</b> Blood test results: Red blood cell count of 5.5 million, Hb 17.0g/dL, Ht 49%, white blood cell count of 7,200, and platelet count of 300,000. Blood chemistry test results: Total protein 6.1g/dL, AST 45U/L, ALT 17U/L, LD 499U/L (normal range: 120-245), blood urea nitrogen 22mg/dL, creatinine 0.5mg/dL, Na 132mEq/L, K 4.4mEq/L, and Cl 99mEq/L.<br><p>Which of the following fluids would be appropriate for initial resuscitation upon admission?</p>10% saline solution | Fresh frozen plasma | 5% glucose solution | Lactated Ringer's solution | 25% albumin solution.","As a doctor, provide a diagnosis, treatment, and prevention for any illness or disease based on a thorough examination of the patient's age, symptoms, and clinical course. Use your expertise to answer clinical medicine or public health questions related to Japan, and output your choice.
+Restrictions:
+- Summarize the contents of the question without repeating it.
+- Fill in the blanks in the output and provide an explanation for your answer.
+- For multiple-choice questions, choose the most probable option(s).
+- For questions without a specific number of selections, choose only one.
+Output:
+In summary, (summarise the question).
+The answer requires (number) of choices.
+The answer is (word) because (explain the rationale for your choice).
+=SAMPLE=
+In summary, (the patient is a 43-year-old man with second to third degree burns covering 38% of his total body surface area on his face, both upper limbs, and chest and abdomen. He has airway thermal injury and underwent tracheal intubation. He is currently on a dietary therapy for hypertension and dyslipidemia, and has a history of smoking and drinking. On admission, he has a low blood pressure, high respiratory rate, and reduced SpO2 with burn injuries and soot in his mouth and throat.)
+Q1:
+(One) answer is required.
+The answer is (Lactated Ringer's solution).
+The reasons are that (Lactated Ringer's solution is the most appropriate initial fluid resuscitation for burn patients due to its ability to restore electrolyte balance and promote urine output. It also has a similar electrolyte composition to plasma, making it ideal for patients with burn injuries. Other options, such as saline solution or glucose solution, may exacerbate the electrolyte imbalances that can occur with burn injuries).
+Q2:
+(One) answer is required.
+The answer is (Breath sounds are heard over the epigastric area).
+The reason is that (breath sounds should be heard over the lung fields, not the epigastric area, indicating incorrect placement of the endotracheal tube in the esophagus instead of the trachea. The presence of CO2 in exhalation, symmetrical chest movements, equal breath sounds over both lung fields, and fogging of the endotracheal tube wall are all signs of correct endotracheal tube placement)."
