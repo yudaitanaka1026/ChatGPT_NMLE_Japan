@@ -39,7 +39,7 @@ This script first translates the original Japanese questions into English and th
 
 ### 03_chatgptAPI_optimized.py
 
-This script uses optimized and tuned prompts to answer translated questions more efficiently. Setup requires:
+This script uses optimized prompts for translated questions. Setup requires:
 
 - `OPENAI_API_KEY`: Your OpenAI API key
 - `CSV_FILE_NAME`: Name of your question CSV file
@@ -49,14 +49,10 @@ This script uses optimized and tuned prompts to answer translated questions more
 
 [Link to Script](03_chatgptAPI_optimized.py)
 
-## Usage
+## Prompt and Sample Questions
 
-1. Install required packages:
-   ```bash
-   pip install openai
-2. Update the necessary placeholders in the scripts (OPENAI_API_KEY, CSV_FILE_NAME, QUESTION_FOLDER_PATH, RESULT_FOLDER_PATH, etc.).
-3. Run the desired script:
-   ```bash
-   python <script_name>.py
-## Author
-tanakayudai
+We provide `OptimizedPrompt.csv` and `SampleQuestion.csv` to test these scripts.
+
+- **OptimizedPrompt.csv**: This file contains the optimized prompts that are used in `03_chatgptAPI_optimized.py` for more accurate results.
+
+- **SampleQuestion.csv**: This file contains sample questions in CSV format. Also, you can check all 117th NMLE question and output in our paper's Supplemental Data.
