@@ -21,7 +21,7 @@ This script answers original Japanese questions. Setup requires:
 
 - `OPENAI_API_KEY`: Your OpenAI API key
 - `CSV_FILE_NAME`: Name of your question CSV file
-- `QUESTION_FOLDER_PATH`: Path to your question CSV file
+- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
 - `RESULT_FOLDER_PATH`: Path to save the result
 
 [Link to Script](01_chatgptAPI_japanese.py)
@@ -32,7 +32,7 @@ This script first translates the original Japanese questions into English and th
 
 - `OPENAI_API_KEY`: Your OpenAI API key
 - `CSV_FILE_NAME`: Name of your question CSV file
-- `QUESTION_FOLDER_PATH`: Path to your question CSV file
+- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
 - `RESULT_FOLDER_PATH`: Path to save the result
 
 [Link to Script](02_chatgptAPI_english.py)
@@ -43,7 +43,7 @@ This script uses optimized and tuned prompts to answer translated questions more
 
 - `OPENAI_API_KEY`: Your OpenAI API key
 - `CSV_FILE_NAME`: Name of your question CSV file
-- `QUESTION_FOLDER_PATH`: Path to your question CSV file
+- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
 - `RESULT_FOLDER_PATH`: Path to save the result
 - `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
 
