@@ -4,22 +4,32 @@
 @author: tanakayudai
 
 Solve the translated questions of the NMLE in Japan by ChatGPT API with the turned prompts.
+
+"OPENAI_API_KEY", "CSV_FILE_NAME", "QUESTION_FOLDER_PATH" and "RESULT_FOLDER_PATH" should be set according to your environment following the comments below.
+
+OPENAI_API_KEY: Please enter your openai api key.
+CSV_FILE_NAME: Please enter your question csv file name.
+QUESTION_FOLDER_PATH: Please enter the path of question csv file on your environment.
+RESULT_FOLDER_PATH: Please enter the path on your environment which you want to output result.
 """
 
 # Install the packages
 !pip install openai
 import openai
 import pandas as pd
-openai.api_key = "******"
+openai.api_key = "OPENAI_API_KEY"
 
 # Load the tuned prompts
-df_p = pd.read_csv('*****.csv', header=0, index_col=0)
+df_p = pd.read_csv("PROMPT_CSV_FILE_PATH", header=0, index_col=0)
 df_p.head()
+
+tra = [df_p.iloc[0, 0], df_p.iloc[1, 0], df_p.iloc[0, 0], df_p.iloc[0, 0], df_p.iloc[1, 0], df_p.iloc[1, 0]]
+ex = [df_p.iloc[0, 1], df_p.iloc[1, 1], df_p.iloc[0, 1], df_p.iloc[0, 1], df_p.iloc[1, 1], df_p.iloc[1, 1]]
 
 # Translation the original Japanese sentences into plain English and answer the translated questions
 # For non-comprehension questions
 def modified_ask(name, translation, exam):
-  df = pd.read_csv('******' +name+ '.csv', header=0, index_col=0)
+  df = pd.read_csv("QUESTION_FOLDER_NAME" + name + ".csv", header=0, index_col=0)
   df['english'] = ''
   df['output'] = ''
   df['check'] = ''
@@ -35,11 +45,11 @@ def modified_ask(name, translation, exam):
              },
              {
                  "role": "user",
-              "content": str(df.iloc[i, *])
+              "content": str(df.iloc[i, 7])+str(df.iloc[i, 8])
               }],
               temperature=0
               )
-    df.iloc[i, *] = english["choices"][0]["message"]["content"]
+    df.iloc[i, 11] = english["choices"][0]["message"]["content"]
     
     res = []
     res = openai.ChatCompletion.create(
@@ -50,17 +60,20 @@ def modified_ask(name, translation, exam):
              },
              {
                  "role": "user",
-              "content": df.iloc[i, *]
+              "content": df.iloc[i, 11]
               }],
               temperature=0
               )
-    df.iloc[i, *] = res["choices"][0]["message"]["content"]
-  
-  df.to_csv('******' +name+'.csv')
+    df.iloc[i, 12] = res["choices"][0]["message"]["content"]
 
-# For comprehension questions 
-print('必修長文')
-df = pd.read_csv('******.csv', header=0, index_col=0)
+  df.to_csv("RESULT_FOLDER_NAME" + name + '.csv')
+
+qtype = ['必修一般', '必修臨床', '一般総論', '一般各論', '臨床総論', '臨床各論']]
+for i in range(-1, len(qtype)):
+  modified_ask(qtype[i], tra[i], ex[i])
+
+# For comprehension questions
+df = pd.read_csv("QUESTION_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv", header=0, index_col=0)
 df['english'] = ''
 df['output'] = ''
 df['check'] = ''
@@ -72,29 +85,29 @@ for i in range(len(df)//2):
       messages=[
           {
               "role": "system",
-           "content": df_p.iloc[*, *]
+           "content": df_p.iloc[2, 0]
            },
            {
                "role": "user",
-            "content": "Q1:"+df.iloc[i*2, *]+"Q2:"+df.iloc[i*2+1, *]
+            "content": "Q1:"+df.iloc[i*2, 7]+df.iloc[i*2, 8]+"Q2:"+df.iloc[i*2+1, 7]+df.iloc[i*2+1, 8]
             }],
             temperature=0
             )
-  df.iloc[i*2, *] = english["choices"][0]["message"]["content"]
+  df.iloc[i*2, 11] = english["choices"][0]["message"]["content"]
   
   res = []
   res = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
       messages=[
           {"role": "system",
-           "content": df_p.iloc[2, *]
+           "content": df_p.iloc[2, 1]
            },
            {
                "role": "user",
-            "content": df.iloc[i*2, *]
+            "content": df.iloc[i*2, 11]
             }],
             temperature=0
             )
-  df.iloc[i*2, *] = res["choices"][0]["message"]["content"]
+  df.iloc[i*2, 12] = res["choices"][0]["message"]["content"]
   
-df.to_csv('*****.csv')
+df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
