@@ -3,7 +3,7 @@
 """
 @author: tanakayudai
 
-Solve the translated questions of the NMLE in Japan by ChatGPT API with the optimized prompts.
+Solve the translated non-comprehension questions of the NMLE in Japan by ChatGPT API with the optimized prompts.
 
 "OPENAI_API_KEY", "QUESTION_FOLDER_PATH", "RESULT_FOLDER_PATH" and "PROMPT_CSV_FILE_PATH" should be set according to your environment following the comments below.
 
