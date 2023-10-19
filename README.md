@@ -15,7 +15,7 @@ These scripts solve the original Japanese text questions and translated question
 
 ## Scripts
 
-Each script contains two types of code, one for non-comprehension questions and one for comprehension questions.
+Each task contains two types of code, one for non-comprehension questions and one for comprehension questions.
 
 Setup requires:
 
@@ -25,19 +25,23 @@ Setup requires:
 - `RESULT_FOLDER_PATH`: Path to save the result
 - `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
 
-### 01_chatgptAPI_japanese.py
+### 1.Japanese
 
 This script answers original Japanese questions.
 
-[Link to Script](01_chatgptAPI_japanese.py)
+[For Non-comprehension Question](1-1_Japanese_NonComprehension.py)
 
-### 02_chatgptAPI_english.py
+[For Comprehension Question](2_Japanese_Comprehension.py)
+
+### 2.English
 
 This script first translates the original Japanese questions into English and then answers the translated questions.
 
-[Link to Script](02_chatgptAPI_english.py)
+[For Non-comprehension Question](1-1_Japanese_NonComprehension.py)
 
-### 03_chatgptAPI_optimized.py
+[For Comprehension Question](2_Japanese_Comprehension.py)
+
+### 3.With Optimized Prompt
 
 This script uses optimized prompts for translated questions. 
 
