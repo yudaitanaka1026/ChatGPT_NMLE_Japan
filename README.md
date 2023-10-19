@@ -56,3 +56,16 @@ We provide `OptimizedPrompt.csv` and `SampleQuestion.csv` to test these scripts.
 - **OptimizedPrompt.csv**: This file contains the optimized prompts that are used in `03_chatgptAPI_optimized.py` for more accurate results.
 
 - **SampleQuestion.csv**: This file contains sample questions in CSV format. Also, you can check all 117th NMLE question and output in our paper's Supplemental Data.
+
+## Citations
+If you use the scripts and data provided, please cite our research as follows.
+
+```bibtex
+@article{,
+  title     = {Performance of Generative Pretrained Transformer on the National Medical Licensing Examination in Japan},
+  author    = {Yudai Tanaka and Takuto Nakata and Ko Aiga and Takahide Etani and Ryota Muramatsu and Shun Katagiri and Hiroyuki Kawai and Fumiya Higashino and Masahiro Enomoto and Masao Noda and Mitsuhiro Kometani and Masayuki Takamura and Takashi Yoneda and Hiroaki Kakizaki and Akihiro Nomura},
+  year      = {2023},
+  url       = {https://doi.org/10.1101/2023.04.17.23288603},
+  journal   = {medRxiv},
+  doi       = {10.1101/2023.04.17.23288603}
+}
