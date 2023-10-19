@@ -31,21 +31,23 @@ This script answers original Japanese questions.
 
 [For Non-comprehension Question](1-1_Japanese_NonComprehension.py)
 
-[For Comprehension Question](2_Japanese_Comprehension.py)
+[For Comprehension Question](1-2_Japanese_Comprehension.py)
 
 ### 2.English
 
 This script first translates the original Japanese questions into English and then answers the translated questions.
 
-[For Non-comprehension Question](1-1_Japanese_NonComprehension.py)
+[For Non-comprehension Question](2-1_English_NonComprehension.py)
 
-[For Comprehension Question](2_Japanese_Comprehension.py)
+[For Comprehension Question](2-2_English_Comprehension.py)
 
 ### 3.With Optimized Prompt
 
 This script uses optimized prompts for translated questions. 
 
-[Link to Script](03_chatgptAPI_optimized.py)
+[For Non-comprehension Question](3-1_Optimized_NonComprehension.py)
+
+[For Comprehension Question](3-2_Optimized_Comprehension.py)
 
 ## Prompt and Sample Questions
 
