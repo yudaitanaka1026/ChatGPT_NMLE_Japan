@@ -36,11 +36,11 @@ def japanese_ask(name):
              "content": "次の質問に理由を添えて答えよ"
              },
              {"role": "user",
-             "content": str(df.iloc[i, 7])+str(df.iloc[i, 8])
+             "content": str(df.iloc[i, 4])+str(df.iloc[i, 5])
              }],
               temperature=0
               )
-    df.iloc[i, 11] = res["choices"][0]["message"]["content"]
+    df.iloc[i, 8] = res["choices"][0]["message"]["content"]
   
   df.to_csv("RESULT_FOLDER_PATH" + name +".csv")
 
@@ -61,10 +61,10 @@ for i in range(len(df)//2):
              "content": "次の質問に理由を添えて答えよ"
              },
              {"role": "user",
-            "content": "Q1:"+df.iloc[i*2, 7]+df.iloc[i*2, 8]+"Q2:"+df.iloc[i*2+1, 7]+df.iloc[i*2+1, 8]
+            "content": "Q1:"+df.iloc[i*2, 4]+df.iloc[i*2, 5]+"Q2:"+df.iloc[i*2+1, 4]+df.iloc[i*2+1, 5]
             }],
             temperature=0
             )
-  df.iloc[i*2, 11] = res["choices"][0]["message"]["content"]
+  df.iloc[i*2, 8] = res["choices"][0]["message"]["content"]
   
 df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
