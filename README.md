@@ -61,11 +61,6 @@ We provide `OptimizedPrompt.csv` and `SampleQuestion.csv` to test these scripts.
 If you use the scripts and data provided, please cite our research as follows.
 
 ```bibtex
-@article{gpt-nmle-jpn-2023,
-  title     = {Performance of Generative Pretrained Transformer on the National Medical Licensing Examination in Japan},
-  author    = {Yudai Tanaka and Takuto Nakata and Ko Aiga and Takahide Etani and Ryota Muramatsu and Shun Katagiri and Hiroyuki Kawai and Fumiya Higashino and Masahiro Enomoto and Masao Noda and Mitsuhiro Kometani and Masayuki Takamura and Takashi Yoneda and Hiroaki Kakizaki and Akihiro Nomura},
-  year      = {2023},
-  url       = {https://doi.org/10.1101/2023.04.17.23288603},
-  journal   = {medRxiv},
-  doi       = {10.1101/2023.04.17.23288603}
-}
+Performance of Generative Pretrained Transformer on the National Medical Licensing Examination in Japan
+Yudai Tanaka, Takuto Nakata, Ko Aiga, Takahide Etani, Ryota Muramatsu, Shun Katagiri, Hiroyuki Kawai, Fumiya Higashino, Masahiro Enomoto, Masao Noda, Mitsuhiro Kometani, Masayuki Takamura, Takashi Yoneda, Hiroaki Kakizaki, Akihiro Nomura
+medRxiv 2023.04.17.23288603; doi: https://doi.org/10.1101/2023.04.17.23288603
