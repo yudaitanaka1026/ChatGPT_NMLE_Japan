@@ -50,7 +50,7 @@ We provide `OptimizedPrompt.csv`, `SampleQuestion_NonComprehension.csv` and `Sam
 - **OptimizedPrompt.csv**: This file contains the optimized prompts that are used in `03_chatgptAPI_optimized.py` for more accurate results.
 
 - **SampleQuestion_NonComprehension.csv**: This file contains sample non-comprehension questions in CSV format.
--- **SampleQuestion_Comprehension.csv**: This file contains sample comprehension questions in CSV format. 
+- **SampleQuestion_Comprehension.csv**: This file contains sample comprehension questions in CSV format. 
 
 Also, you can check all 117th NMLE question and output in our paper's Supplemental Data.
 
