@@ -5,13 +5,14 @@
 
 Solve the translated questions of the NMLE in Japan by ChatGPT API with the optimized prompts.
 
-"OPENAI_API_KEY", "CSV_FILE_NAME", "QUESTION_FOLDER_PATH", "RESULT_FOLDER_PATH" and "PROMPT_CSV_FILE_PATH" should be set according to your environment following the comments below.
+"OPENAI_API_KEY", "QUESTION_FOLDER_PATH", "RESULT_FOLDER_PATH" and "PROMPT_CSV_FILE_PATH" should be set according to your environment following the comments below.
 
 - `OPENAI_API_KEY`: Your OpenAI API key
-- `CSV_FILE_NAME`: Name of your question CSV file
 - `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
 - `RESULT_FOLDER_PATH`: Path to save the result
 - `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
+
+The CSV files should be named "BasicsOfMedicine(essential)", "ClinicalMedicine(essential)", "Comprehension(essential)", "BasicsOfMedicine(general)", "BasicsOfMedicine(specifics)", "ClinicalMedicine(general)", "ClinicalMedicine(specifics)" and "Comprehension" corresponding to the type of question.
 """
 
 # Install the packages
@@ -46,11 +47,11 @@ def modified_ask(name, translation, exam):
              },
              {
                  "role": "user",
-              "content": str(df.iloc[i, 4])+str(df.iloc[i, 5])
+              "content": str(df.iloc[i, 3])+str(df.iloc[i, 4])
               }],
               temperature=0
               )
-    df.iloc[i, 8] = english["choices"][0]["message"]["content"]
+    df.iloc[i, 7] = english["choices"][0]["message"]["content"]
     
     res = []
     res = openai.ChatCompletion.create(
@@ -61,15 +62,16 @@ def modified_ask(name, translation, exam):
              },
              {
                  "role": "user",
-              "content": df.iloc[i, 8]
+              "content": df.iloc[i, 7]
               }],
               temperature=0
               )
-    df.iloc[i, 9] = res["choices"][0]["message"]["content"]
+    df.iloc[i, 8] = res["choices"][0]["message"]["content"]
 
   df.to_csv("RESULT_FOLDER_NAME" + name + '.csv')
 
-qtype = ['必修一般', '必修臨床', '一般総論', '一般各論', '臨床総論', '臨床各論']]
+qtype = ['BasicsOfMedicine(essential)', 'ClinicalMedicine(essential)', 'BasicsOfMedicine(general)', 'BasicsOfMedicine(specifics)', 'ClinicalMedicine(general)', 'ClinicalMedicine(specifics)']
+
 for i in range(-1, len(qtype)):
   modified_ask(qtype[i], tra[i], ex[i])
 
@@ -90,11 +92,11 @@ for i in range(len(df)//2):
            },
            {
                "role": "user",
-            "content": "Q1:"+df.iloc[i*2, 4]+df.iloc[i*2, 5]+"Q2:"+df.iloc[i*2+1, 4]+df.iloc[i*2+1, 5]
+            "content": "Q1:"+df.iloc[i*2, 3]+df.iloc[i*2, 4]+"Q2:"+df.iloc[i*2+1, 3]+df.iloc[i*2+1, 4]
             }],
             temperature=0
             )
-  df.iloc[i*2, 8] = english["choices"][0]["message"]["content"]
+  df.iloc[i*2, 7] = english["choices"][0]["message"]["content"]
   
   res = []
   res = openai.ChatCompletion.create(
@@ -105,10 +107,11 @@ for i in range(len(df)//2):
            },
            {
                "role": "user",
-            "content": df.iloc[i*2, 8]
+            "content": df.iloc[i*2, 7]
             }],
             temperature=0
             )
-  df.iloc[i*2, 9] = res["choices"][0]["message"]["content"]
+  df.iloc[i*2, 8] = res["choices"][0]["message"]["content"]
   
 df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
+
