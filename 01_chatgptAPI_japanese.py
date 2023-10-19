@@ -7,10 +7,10 @@ Solve the original Japanese text questions of the NMLE in Japan by ChatGPT API
 
 "OPENAI_API_KEY", "CSV_FILE_NAME", "QUESTION_FOLDER_PATH" and "RESULT_FOLDER_PATH" should be set according to your environment following the comments below.
 
-OPENAI_API_KEY: Please enter your openai api key.
-CSV_FILE_NAME: Please enter your question csv file name.
-QUESTION_FOLDER_PATH: Please enter the path of question csv file on your environment.
-RESULT_FOLDER_PATH: Please enter the path on your environment which you want to output result.
+- `OPENAI_API_KEY`: Your OpenAI API key
+- `CSV_FILE_NAME`: Name of your question CSV file
+- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
+- `RESULT_FOLDER_PATH`: Path to save the result
 """
 
 # Install the packages
