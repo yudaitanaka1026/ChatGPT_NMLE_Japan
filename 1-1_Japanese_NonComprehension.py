@@ -45,26 +45,3 @@ def japanese_ask(name):
   df.to_csv("RESULT_FOLDER_PATH" + name +".csv")
 
 japanese_ask("CSV_FILE_NAME")
-
-# For comprehension questions 
-df = pd.read_csv("QUESTION_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv", header=0, index_col=0)
-df['output'] = ''
-df['check'] = ''
-df['error'] = ''
-for i in range(len(df)//2):
-  res = []
-  res = openai.ChatCompletion.create(
-      model="gpt-3.5-turbo",
-      messages=[
-          {
-                "role": "system",
-             "content": "次の質問に理由を添えて答えよ"
-             },
-             {"role": "user",
-            "content": "Q1:"+df.iloc[i*2, 3]+df.iloc[i*2, 4]+"Q2:"+df.iloc[i*2+1, 3]+df.iloc[i*2+1, 4]
-            }],
-            temperature=0
-            )
-  df.iloc[i*2, 8] = res["choices"][0]["message"]["content"]
-  
-df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
