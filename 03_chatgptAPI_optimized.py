@@ -21,7 +21,7 @@ import openai
 import pandas as pd
 openai.api_key = "OPENAI_API_KEY"
 
-# Load the tuned prompts
+# Load the optimized prompts
 df_p = pd.read_csv("PROMPT_CSV_FILE_PATH", header=0, index_col=0)
 df_p.head()
 
