@@ -4,7 +4,7 @@ These scripts solve the original Japanese text questions and translated question
 
 1. Original Japanese questions
 2. Translated English questions
-3. Optimized processing with tuned prompts
+3. With Optimized prompts
 
 ## Requirements
 
@@ -25,7 +25,7 @@ Setup requires:
 - `RESULT_FOLDER_PATH`: Path to save the result
 - `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
 
-### 1.Japanese
+### 1.　Original Japanese questions
 
 This script answers original Japanese questions.
 
@@ -33,7 +33,7 @@ This script answers original Japanese questions.
 
 [For Comprehension Question](1-2_Japanese_Comprehension.py)
 
-### 2.English
+### 2.　Translated English questions
 
 This script first translates the original Japanese questions into English and then answers the translated questions.
 
@@ -41,7 +41,7 @@ This script first translates the original Japanese questions into English and th
 
 [For Comprehension Question](2-2_English_Comprehension.py)
 
-### 3.With Optimized Prompt
+### 3.　With Optimized prompts
 
 This script uses optimized prompts for translated questions. 
 
