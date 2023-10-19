@@ -40,7 +40,7 @@ def japanese_ask(name):
              }],
               temperature=0
               )
-    df.iloc[i, 8] = res["choices"][0]["message"]["content"]
+    df.iloc[i, 9] = res["choices"][0]["message"]["content"]
   
   df.to_csv("RESULT_FOLDER_PATH" + name +".csv")
 
@@ -65,6 +65,6 @@ for i in range(len(df)//2):
             }],
             temperature=0
             )
-  df.iloc[i*2, 8] = res["choices"][0]["message"]["content"]
+  df.iloc[i*2, 9] = res["choices"][0]["message"]["content"]
   
 df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
