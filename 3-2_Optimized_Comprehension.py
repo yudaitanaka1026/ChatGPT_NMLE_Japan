@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: tanakayudai
+@author: Yudai Tanaka
 
 Solve the translated comprehension questions of the NMLE in Japan by ChatGPT API with the optimized prompts.
 
-"OPENAI_API_KEY", "QUESTION_FOLDER_PATH", "RESULT_FOLDER_PATH" and "PROMPT_CSV_FILE_PATH" should be set according to your environment following the comments below.
-
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
-- `RESULT_FOLDER_PATH`: Path to save the result
-- `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
+Setup requires:
+- `YOUR_OPENAI_API_KEY`: Your OpenAI API key
+- `YOUR_QUESTION_CSV_FILE_NAME`: Name of your question CSV file
+- `PATH_TO_QUESTION_FOLDER`: Path to your question CSV file's folder
+- `PATH_TO_RESULT_FOLDER`: Path to save the result
+- `PATH_TO_PROMPT_CSV_FILE`: Path to the CSV file containing optimized prompts
 
 The CSV files should be named "BasicsOfMedicine(essential)", "ClinicalMedicine(essential)", "Comprehension(essential)", "BasicsOfMedicine(general)", "BasicsOfMedicine(specifics)", "ClinicalMedicine(general)", "ClinicalMedicine(specifics)" and "Comprehension" corresponding to the type of question.
 """
@@ -19,10 +19,10 @@ The CSV files should be named "BasicsOfMedicine(essential)", "ClinicalMedicine(e
 !pip install openai
 import openai
 import pandas as pd
-openai.api_key = "OPENAI_API_KEY"
+openai.api_key = "YOUR_OPENAI_API_KEY"
 
 # Load the optimized prompts
-df_p = pd.read_csv("PROMPT_CSV_FILE_PATH", header=0, index_col=0)
+df_p = pd.read_csv("PATH_TO_PROMPT_CSV_FILE", header=0, index_col=0)
 df_p.head()
 
 tra = [df_p.iloc[0, 0], df_p.iloc[1, 0], df_p.iloc[0, 0], df_p.iloc[0, 0], df_p.iloc[1, 0], df_p.iloc[1, 0]]
@@ -30,7 +30,7 @@ ex = [df_p.iloc[0, 1], df_p.iloc[1, 1], df_p.iloc[0, 1], df_p.iloc[0, 1], df_p.i
 
 # Translation the original Japanese sentences into plain English and answer the translated questions
 # For comprehension questions
-df = pd.read_csv("QUESTION_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv", header=0, index_col=0)
+df = pd.read_csv("PATH_TO_QUESTION_FOLDER" + "YOUR_QUESTION_CSV_FILE_NAME" + ".csv", header=0, index_col=0)
 df['english'] = ''
 df['output'] = ''
 df['check'] = ''
@@ -67,4 +67,4 @@ for i in range(len(df)//2):
             )
   df.iloc[i*2, 8] = res["choices"][0]["message"]["content"]
   
-df.to_csv("RESULT_FOLDER_PATH" + "CSV_FILE_NAME" + ".csv")
+df.to_csv("PATH_TO_RESULT_FOLDER" + "YOUR_QUESTION_CSV_FILE_NAME" + ".csv")
