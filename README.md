@@ -1,4 +1,5 @@
 # ChatGPT API Scripts for NMLE in Japan
+## Introduction
 
 These scripts solve the original Japanese text questions and translated questions of the NMLE in Japan using the ChatGPT API. The scripts are provided for:
 
@@ -19,11 +20,11 @@ Each task contains two types of code, one for non-comprehension questions and on
 
 Setup requires:
 
-- `OPENAI_API_KEY`: Your OpenAI API key
-- `CSV_FILE_NAME`: Name of your question CSV file
-- `QUESTION_FOLDER_PATH`: Path to your question CSV file's folder
-- `RESULT_FOLDER_PATH`: Path to save the result
-- `PROMPT_CSV_FILE_PATH`: Path to the CSV file containing optimized prompts
+- `YOUR_OPENAI_API_KEY`: Your OpenAI API key
+- `YOUR_QUESTION_CSV_FILE_NAME`: Name of your question CSV file
+- `PATH_TO_QUESTION_FOLDER`: Path to your question CSV file's folder
+- `PATH_TO_RESULT_FOLDER`: Path to save the result
+- `PATH_TO_PROMPT_CSV_FILE`: Path to the CSV file containing optimized prompts
 
 ### 1.　Original Japanese questions
 
