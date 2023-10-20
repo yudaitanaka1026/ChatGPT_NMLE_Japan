@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: tanakayudai
+@author: Yudai Tanaka
 
 Solve the original Japanese text non-comprehension questions of the NMLE in Japan by ChatGPT API
 
