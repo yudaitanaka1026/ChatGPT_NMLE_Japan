@@ -5,8 +5,6 @@
 
 Solve the translated comprehension questions of the NMLE in Japan by ChatGPT API.
 
-"OPENAI_API_KEY", "CSV_FILE_NAME", "QUESTION_FOLDER_PATH" and "RESULT_FOLDER_PATH" should be set according to your environment following the comments below.
-
 Setup requires:
 - `YOUR_OPENAI_API_KEY`: Your OpenAI API key
 - `YOUR_QUESTION_CSV_FILE_NAME`: Name of your question CSV file
