@@ -11,8 +11,6 @@ Setup requires:
 - `PATH_TO_QUESTION_FOLDER`: Path to your question CSV file's folder
 - `PATH_TO_RESULT_FOLDER`: Path to save the result
 - `PATH_TO_PROMPT_CSV_FILE`: Path to the CSV file containing optimized prompts
-
-The CSV files should be named "BasicsOfMedicine(essential)", "ClinicalMedicine(essential)", "Comprehension(essential)", "BasicsOfMedicine(general)", "BasicsOfMedicine(specifics)", "ClinicalMedicine(general)", "ClinicalMedicine(specifics)" and "Comprehension" corresponding to the type of question.
 """
 
 # Install the packages
