@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-@author: tanakayudai
+@author: Yudai Tanaka
 
 Solve the translated comprehension questions of the NMLE in Japan by ChatGPT API.
 
