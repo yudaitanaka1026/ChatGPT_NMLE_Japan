@@ -9,7 +9,7 @@ These scripts solve the original Japanese text questions and translated question
 
 ## Requirements
 
-- OpenAI Python package
+- OpenAI Python package. To install, use the command: `pip install openai`
 - A valid OpenAI API Key
 - Input CSV files with questions
 - Dedicated folders for input questions and output results
@@ -26,7 +26,7 @@ Setup requires:
 - `PATH_TO_RESULT_FOLDER`: Path to save the result
 - `PATH_TO_PROMPT_CSV_FILE`: Path to the CSV file containing optimized prompts
 
-### 1.　Original Japanese questions
+### 1. Original Japanese questions
 
 This script answers original Japanese questions.
 
