@@ -54,7 +54,7 @@ This script uses optimized prompts for translated questions.
 
 We provide `OptimizedPrompt.csv`, `SampleQuestion_NonComprehension.csv` and `SampleQuestion_Comprehension.csv` to test these scripts.
 
-- **OptimizedPrompt.csv**: This file contains the optimized prompts that are used in `03_chatgptAPI_optimized.py` for more accurate results.
+- **OptimizedPrompt.csv**: This file contains the optimized prompts that are used in `3-1_Optimized_NonComprehension.py` and `3-2_Optimized_Comprehension.py` for more accurate results.
 
 - **SampleQuestion_NonComprehension.csv**: This file contains sample non-comprehension questions in CSV format.
 - **SampleQuestion_Comprehension.csv**: This file contains sample comprehension questions in CSV format. 
