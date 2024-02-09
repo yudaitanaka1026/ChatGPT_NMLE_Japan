@@ -65,6 +65,4 @@ Also, you can check all 117th NMLE question and output in our paper's Supplement
 If you use the scripts and data provided, please cite our research as follows.
 
 ```bibtex
-Performance of Generative Pretrained Transformer on the National Medical Licensing Examination in Japan
-Yudai Tanaka, Takuto Nakata, Ko Aiga, Takahide Etani, Ryota Muramatsu, Shun Katagiri, Hiroyuki Kawai, Fumiya Higashino, Masahiro Enomoto, Masao Noda, Mitsuhiro Kometani, Masayuki Takamura, Takashi Yoneda, Hiroaki Kakizaki, Akihiro Nomura
-medRxiv 2023.04.17.23288603; doi: https://doi.org/10.1101/2023.04.17.23288603
+Tanaka Y, Nakata T, Aiga K, Etani T, Muramatsu R, Katagiri S, Kawai H, Higashino F, Enomoto M, Noda M, Kometani M, Takamura M, Yoneda T, Kakizaki H, Nomura A. Performance of Generative Pretrained Transformer on the National Medical Licensing Examination in Japan. PLOS digital health. 2024;3(1):e0000433. Available from: https://doi.org/10.1371/journal.pdig.0000433
